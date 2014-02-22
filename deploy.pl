@@ -10,6 +10,8 @@ while (<STDIN>) {
     $mail .= $_;
 }
 
+print $mail;
+
 =head1 NAME
 
 deploy_by_mailhook
