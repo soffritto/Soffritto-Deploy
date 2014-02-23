@@ -17,6 +17,7 @@ sub new {
     }
     $args{git_path} ||= 'git';
     $args{github_type} ||= 'ssh';
+    $args{after_deploy} ||= 'true';
     bless \%args, $class;
 }
 
@@ -67,9 +68,9 @@ sub deploy {
         $system = <<END;
 cd $self->{deploy_to} && \
     $git fetch && \
-    $git checkout -$option $self->{branch}
+    $git checkout -$option $self->{branch} && \
+    $self->{after_deploy}
 END
-        warn $system;
     } else {
         my $dirname = dirname($self->{deploy_to});
         -d $dirname or die "$self->{deploy_to} nor its parent directory not found";
@@ -78,7 +79,8 @@ END
 cd $dirname && \
     $git clone $repo $basename && \
     cd $basename && \
-    $git checkout -qb $self->{branch} origin/$self->{branch}
+    $git checkout -qb $self->{branch} origin/$self->{branch} && \
+    $self->{after_deploy}
 END
     }
     if ($system) {
