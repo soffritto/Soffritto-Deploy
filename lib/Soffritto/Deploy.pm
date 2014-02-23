@@ -46,9 +46,12 @@ sub repo {
     my $self = shift;
     my $home = $self->{home} or return;
 #    if ($self->{github_type} eq 'subversion') { return $home; }
-    if ($self->{github_type} eq 'https') { return "$home.git"; }
+    my ($user, $repo) = $home =~ m{^https://github.com/([^\/]+)/([^\/]+)/?$};
+    if ($self->{github_type} eq 'https') { 
+        $self->{username} && $self->{password} or die "username or password not found";
+        return "https://$self->{username}:$self->{password}\@github.com/$user/$repo.git";
+    }
     if ($self->{github_type} eq 'ssh') {
-        my ($user, $repo) = $home =~ m{^https://github.com/([^\/]+)/([^\/]+)/?$};
         return "git\@github.com:$user/$repo.git";
     } 
 }
@@ -77,7 +80,7 @@ END
         my $basename = basename($self->{deploy_to});
         $system = <<END
 cd $dirname && \
-    $git clone $repo $basename && \
+    $git clone -q $repo $basename && \
     cd $basename && \
     $git checkout -qb $self->{branch} origin/$self->{branch} && \
     $self->{after_deploy}
