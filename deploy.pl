@@ -1,16 +1,24 @@
 #!/usr/bin/perl
 use strict;
 use warnings;
+use lib 'lib';
+use Soffritto::Deploy;
+use Getopt::Long;
 
-our $VERSION='0.01';
+my %opt;
+GetOptions(
+    \%opt,
+    'config=s',
+    'repository=s',
+    'deploy_to=s',
+);
 
-my $mail = '';
-
-while (<STDIN>) {
-    $mail .= $_;
+my $deploy = Soffritto::Deploy->new(%opt);
+if ($deploy->parse_mail(\*STDIN)) {
+    print 'OK';
+} else {
+    print 'NG';
 }
-
-print $mail;
 
 =head1 NAME
 
