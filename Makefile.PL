@@ -7,6 +7,7 @@ WriteMakefile(
     AUTHOR => 'Nobuo Danjou <danjou@soffritto.org>',
     VERSION_FROM => 'lib/Soffritto/Deploy.pm',
     PREREQ_PM => {
+        'FindBin' => 0,
         'GetOpt::Long' => 0,
         'File::Basename' => 0,
         'Test::More' => 0,
