@@ -16,9 +16,9 @@ GetOptions(
 
 my $deploy = Soffritto::Deploy->new(%opt);
 if ($deploy->parse_mail(\*STDIN)) {
-    print 'OK';
+    $deploy->to_tasks;
 } else {
-    print 'NG';
+    die "NG";
 }
 
 =head1 NAME

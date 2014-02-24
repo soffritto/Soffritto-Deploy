@@ -2,6 +2,7 @@ package Soffritto::Deploy;
 use strict;
 use warnings;
 use File::Basename;
+use Data::Dumper;
 
 our $VERSION = '0.01';
 
@@ -19,6 +20,38 @@ sub new {
     $args{github_type} ||= 'ssh';
     $args{after_deploy} ||= 'true';
     bless \%args, $class;
+}
+
+sub repo {
+    my $self = shift;
+    my $home = $self->{home} or return;
+#    if ($self->{github_type} eq 'subversion') { return $home; }
+    my ($user, $repo) = $home =~ m{^https://github.com/([^\/]+)/([^\/]+)/?$};
+    if ($self->{github_type} eq 'https') { 
+        $self->{username} && $self->{password} or die "username or password not found";
+        return "https://$self->{username}:$self->{password}\@github.com/$user/$repo.git";
+    }
+    if ($self->{github_type} eq 'ssh') {
+        return "git\@github.com:$user/$repo.git";
+    } 
+}
+
+sub do_tasks {
+    my ($self, $tasks) = @_;
+    if (! defined($tasks)) {
+        $tasks = $self->{tasks}
+            or die "tasks not found";
+    }
+    for my $task (@$tasks) {
+        $self->$task
+            or die "task $task failed";
+    }
+    1;
+}
+
+sub dump {
+    my $self = shift;
+    print Dumper($self);
 }
 
 sub parse_mail {
@@ -40,20 +73,6 @@ sub parse_mail {
         }
     }
     return $self->{from_github} && $self->{home_input} && $self->{branch};
-}
-
-sub repo {
-    my $self = shift;
-    my $home = $self->{home} or return;
-#    if ($self->{github_type} eq 'subversion') { return $home; }
-    my ($user, $repo) = $home =~ m{^https://github.com/([^\/]+)/([^\/]+)/?$};
-    if ($self->{github_type} eq 'https') { 
-        $self->{username} && $self->{password} or die "username or password not found";
-        return "https://$self->{username}:$self->{password}\@github.com/$user/$repo.git";
-    }
-    if ($self->{github_type} eq 'ssh') {
-        return "git\@github.com:$user/$repo.git";
-    } 
 }
 
 sub deploy {
