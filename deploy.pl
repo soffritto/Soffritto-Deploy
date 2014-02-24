@@ -6,6 +6,8 @@ use lib $FindBin::RealBin .'/lib';
 use Soffritto::Deploy;
 use Getopt::Long;
 
+umask 022;
+
 my %opt;
 GetOptions(
     \%opt,
