@@ -91,7 +91,7 @@ sub deploy {
 cd $self->{deploy_to} && \
     $git fetch && \
     $git checkout -$option $self->{branch} && \
-    $git pull && \
+    $git pull origin $self->{branch} && \
     $self->{after_deploy}
 END
     } else {
