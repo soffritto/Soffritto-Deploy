@@ -1,0 +1,80 @@
+Return-Path: <bounce+00913e.40f-danjou=soffritto.org@github.com>
+X-Original-To: danjou@soffritto.org
+Delivered-To: danjou@soffritto.org
+Received: from localhost (localhost [127.0.0.1])
+	by mail.soffritto.org (Postfix) with ESMTP id E2A9D259AA
+	for <danjou@soffritto.org>; Sat, 22 Feb 2014 19:24:16 +0900 (JST)
+X-Virus-Scanned: amavisd-new at soffritto.org
+Authentication-Results: claudia.soffritto.org (amavisd-new);
+	dkim=pass (1024-bit key) header.d=github.com;
+	domainkeys=pass (1024-bit key) header.from=noreply@github.com
+	header.sender=noreply@github.com header.d=github.com
+Received: from mail.soffritto.org ([127.0.0.1])
+	by localhost (claudia.soffritto.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id sK5C3RA4FgKW for <danjou@soffritto.org>;
+	Sat, 22 Feb 2014 19:24:12 +0900 (JST)
+Received: from m69-170.mailgun.net (m69-170.mailgun.net [166.78.69.170])
+	by mail.soffritto.org (Postfix) with ESMTP id 8042A257E3
+	for <danjou@soffritto.org>; Sat, 22 Feb 2014 19:24:12 +0900 (JST)
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=github.com; q=dns/txt;
+ s=mailo; t=1393064651; h=Date: From: Reply-To: To: Message-Id: Subject:
+ Mime-Version: Content-Type: Content-Transfer-Encoding: Sender;
+ bh=zKcYIPkjEoHY5diLz3WGpuiyVa2zPRUAHxWx8PgxMCw=; b=FV/exXxkcDp3fKbzZ2pGqbB726eqKWEQpPQHNnnjLPYVHVMCySpuvgXYcmC7hmV3nHXaEeSW
+ iHLFgmZhPh8xTW9HziZMjJAI2j3oLj6iCL3rbNSeEz9CUSf7VUPcAax3wGCi+c9PluJhHurP
+ vZ0gIMSlx9lcAW3XZHm+SPdnWwI=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=github.com; s=mailo; q=dns;
+ h=Date: From: Reply-To: To: Message-Id: Subject: Mime-Version:
+ Content-Type: Content-Transfer-Encoding: Sender;
+ b=Zovcnxk6RBA2t560uw8aynDusMELwia5pU8qSsswrHKLHpBotY+mjOosct448DrO5mL2CV
+ qob+LTEJ2iJz1yA7XM+Uses5zv4U5BH0BnqTHBlw0FaQ9tMuR+iqoIj+KSiS4Qqbj1cD+IEn
+ NeOFzNxYr4ZCgvbg0YxfG1nysKvEQ=
+Received: from github.com (Unknown [192.30.252.51]) by mxa.mailgun.org with
+ ESMTP id 53087ac8.7fd63054c2a0-in1; Sat, 22 Feb 2014 10:24:08 -0000 (UTC)
+Date: Sat, 22 Feb 2014 02:24:07 -0800
+From: GitHub <noreply@github.com>
+Reply-To: GitHub <noreply@github.com>
+To: danjou@soffritto.org
+Message-Id: <53087ac7d7a82_209dc4fd38718db@hookshot-fe10-pe1-prd.aws.github.net.mail>
+Subject: [soffritto/deploy_by_mailhook] d9c704: multi commit push sample
+ (commit #1)
+Mime-Version: 1.0
+Content-Type: multipart/mixed; boundary="--==_mimepart_53087ac7d73e5_209dc4fd3871763"; charset="UTF-8"
+Content-Transfer-Encoding: 7bit
+X-Mailgun-Sid: WyI3Y2QzNiIsICJkYW5qb3VAc29mZnJpdHRvLm9yZyIsICI0MGYiXQ==
+Sender: noreply@github.com
+
+----==_mimepart_53087ac7d73e5_209dc4fd3871763
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+  Branch: refs/heads/first_implementation
+  Home:   https://github.com/soffritto/deploy_by_mailhook
+  Commit: d9c7046f65b180143ae016a367c3c3fcd8e2ac8c
+      https://github.com/soffritto/deploy_by_mailhook/commit/d9c7046f65b180143ae016a367c3c3fcd8e2ac8c
+  Author: Nobuo Danjou <danjou@soffritto.org>
+  Date:   2014-02-22 (Sat, 22 Feb 2014)
+
+  Changed paths:
+    M t/sample.mime
+
+  Log Message:
+  -----------
+  multi commit push sample (commit #1)
+
+
+  Commit: df841297b8e79d5e2355e9758358fe74a50b861a
+      https://github.com/soffritto/deploy_by_mailhook/commit/df841297b8e79d5e2355e9758358fe74a50b861a
+  Author: Nobuo Danjou <danjou@soffritto.org>
+  Date:   2014-02-22 (Sat, 22 Feb 2014)
+
+  Changed paths:
+    A .gitignore
+
+  Log Message:
+  -----------
+  add .gitignore and multiple commit sample (commit #2)
+
+
+Compare: https://github.com/soffritto/deploy_by_mailhook/compare/fc97e6f0ddfe...df841297b8e7
+----==_mimepart_53087ac7d73e5_209dc4fd3871763--

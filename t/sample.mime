@@ -1,0 +1,68 @@
+Return-Path: <bounce+00913e.40f-danjou=soffritto.org@github.com>
+X-Original-To: danjou@soffritto.org
+Delivered-To: danjou@soffritto.org
+Received: from localhost (localhost [127.0.0.1])
+	by mail.soffritto.org (Postfix) with ESMTP id B789D259AA
+	for <danjou@soffritto.org>; Sat, 22 Feb 2014 19:19:19 +0900 (JST)
+X-Virus-Scanned: amavisd-new at soffritto.org
+Authentication-Results: claudia.soffritto.org (amavisd-new);
+	dkim=pass (1024-bit key) header.d=github.com;
+	domainkeys=pass (1024-bit key) header.from=noreply@github.com
+	header.sender=noreply@github.com header.d=github.com
+Received: from mail.soffritto.org ([127.0.0.1])
+	by localhost (claudia.soffritto.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id S-kX2QXQAaPk for <danjou@soffritto.org>;
+	Sat, 22 Feb 2014 19:19:15 +0900 (JST)
+Received: from m69-170.mailgun.net (m69-170.mailgun.net [166.78.69.170])
+	by mail.soffritto.org (Postfix) with ESMTP id 8DE08257E3
+	for <danjou@soffritto.org>; Sat, 22 Feb 2014 19:19:15 +0900 (JST)
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=github.com; q=dns/txt;
+ s=mailo; t=1393064354; h=Date: From: Reply-To: To: Message-Id: Subject:
+ Mime-Version: Content-Type: Content-Transfer-Encoding: Sender;
+ bh=NjCZ3Kvu35Dfdu4vF6FsBO+LzeM+4TE2nR2ADOyGsI4=; b=xriBi2+rrUlg0WECPyGK8NKuAd+G9cuycgKY5eFKNS9BDzZ7iLpzRi4s/WmpZgWWSnTNoBeb
+ LTAm6B+ykWQMR/B0uu3P/1Jwx4OCby9svK7FMSd9ApCAqgGudFF+lfN3KEV0hQgENmS2NJ56
+ /rLlnd8AB93Iw5EVIzffRvsBXEM=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=github.com; s=mailo; q=dns;
+ h=Date: From: Reply-To: To: Message-Id: Subject: Mime-Version:
+ Content-Type: Content-Transfer-Encoding: Sender;
+ b=VxEXvcXJ/3buiCt9v7+8LTaqBmTTXi6N36vvnBq4Yd2WAivAJPSNhBm4NVXKoq0SO2OU2t
+ Gvpw6+xm+hpEuhCjgzrEFbW5y6mVmk1e36oUA81QuX5jSIoxBG+uuAf3KHdvyZ6mlGEp+hul
+ aQUaXvSzLArNHE8knn8W/dA8x0Ycw=
+Received: from github.com (Unknown [192.30.252.44]) by mxa.mailgun.org with
+ ESMTP id 53087998.7fc3a40ba8a0-in3; Sat, 22 Feb 2014 10:19:04 -0000 (UTC)
+Date: Sat, 22 Feb 2014 02:19:04 -0800
+From: GitHub <noreply@github.com>
+Reply-To: GitHub <noreply@github.com>
+To: danjou@soffritto.org
+Message-Id: <5308799883161_28ab11a1d40364b0@hookshot-fe1-cp1-prd.iad.github.net.mail>
+Subject: [soffritto/deploy_by_mailhook] fc97e6: make better test
+Mime-Version: 1.0
+Content-Type: multipart/mixed; boundary="--==_mimepart_5308799882be5_28ab11a1d403638f"; charset="UTF-8"
+Content-Transfer-Encoding: 7bit
+X-Mailgun-Sid: WyI3Y2QzNiIsICJkYW5qb3VAc29mZnJpdHRvLm9yZyIsICI0MGYiXQ==
+Sender: noreply@github.com
+
+----==_mimepart_5308799882be5_28ab11a1d403638f
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+  Branch: refs/heads/first_implementation
+  Home:   https://github.com/soffritto/deploy_by_mailhook
+  Commit: fc97e6f0ddfef2190de6c95eac3a2e07ee229a90
+      https://github.com/soffritto/deploy_by_mailhook/commit/fc97e6f0ddfef2190de6c95eac3a2e07ee229a90
+  Author: Nobuo Danjou <danjou@soffritto.org>
+  Date:   2014-02-22 (Sat, 22 Feb 2014)
+
+  Changed paths:
+    M deploy.pl
+    M t/01_compile.t
+    A t/sample.mime
+
+  Log Message:
+  -----------
+  make better test
+
+
+
+----==_mimepart_5308799882be5_28ab11a1d403638f--
