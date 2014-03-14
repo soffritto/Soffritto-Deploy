@@ -47,10 +47,10 @@ Content-Type: text/plain;
  charset=UTF-8
 Content-Transfer-Encoding: 7bit
 
-  Branch: refs/heads/first_implementation
-  Home:   https://github.com/soffritto/deploy_by_mailhook
+  Branch: refs/heads/master
+  Home:   https://github.com/soffritto/Soffritto-Deploy
   Commit: fc97e6f0ddfef2190de6c95eac3a2e07ee229a90
-      https://github.com/soffritto/deploy_by_mailhook/commit/fc97e6f0ddfef2190de6c95eac3a2e07ee229a90
+      https://github.com/soffritto/Soffritto-Deploy/commit/fc97e6f0ddfef2190de6c95eac3a2e07ee229a90
   Author: Nobuo Danjou <danjou@soffritto.org>
   Date:   2014-02-22 (Sat, 22 Feb 2014)
 

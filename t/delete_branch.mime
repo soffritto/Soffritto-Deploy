@@ -1,0 +1,53 @@
+Return-Path: <bounce+00913e.40f-danjou=soffritto.org@github.com>
+X-Original-To: danjou@soffritto.org
+Delivered-To: danjou@soffritto.org
+Received: from localhost (localhost [127.0.0.1])
+	by mail.soffritto.org (Postfix) with ESMTP id E1E41264F9
+	for <danjou@soffritto.org>; Fri, 14 Mar 2014 13:05:05 +0900 (JST)
+X-Virus-Scanned: amavisd-new at soffritto.org
+Authentication-Results: claudia.soffritto.org (amavisd-new);
+	dkim=pass (1024-bit key) header.d=github.com;
+	domainkeys=pass (1024-bit key) header.from=noreply@github.com
+	header.sender=noreply@github.com header.d=github.com
+Received: from mail.soffritto.org ([127.0.0.1])
+	by localhost (claudia.soffritto.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id b4bi5BEiaK2w for <danjou@soffritto.org>;
+	Fri, 14 Mar 2014 13:05:01 +0900 (JST)
+Received: from m71-131.mailgun.net (m71-131.mailgun.net [166.78.71.131])
+	by mail.soffritto.org (Postfix) with ESMTPS id 28C47259AA
+	for <danjou@soffritto.org>; Fri, 14 Mar 2014 13:05:00 +0900 (JST)
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=github.com; q=dns/txt;
+ s=mailo; t=1394769898; h=Date: From: Reply-To: To: Message-Id: Subject:
+ Mime-Version: Content-Type: Content-Transfer-Encoding: Sender;
+ bh=upgurTZQTsj7sSMACHDK5TXd02hTYXArjt4Yrukvxa4=; b=VIONR/X/LIb0APfUWVxr6vthzky+5t75Hh53H7DPPJAe7ZXUgsKHvKCqtSG/0gFRCNAbkGO7
+ 7lZH+SN3nY6ctvqQrA3M8B8G7QLRq8LOaO5FrCJr00AGOyu/4mP27nwKwcoKTnn2oie5NhOv
+ Fhl2S6V7u3mS1Yx7jT/CY6kz8dc=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=github.com; s=mailo; q=dns;
+ h=Date: From: Reply-To: To: Message-Id: Subject: Mime-Version:
+ Content-Type: Content-Transfer-Encoding: Sender;
+ b=gTP4k7jpS1lCVvV4d4pa4rs/zClufV88X9WQRhTpjJ6Ou1wIGSU76tu2hoH1D7N0ue/bSm
+ zPiJVIVFGptRKC8InI8zf0MGiDX32WTfpDOnPehHRQmAIgyJQq5iGWBmdSGc4I+a5mqy8n5H
+ ikBv0i0FzWR7EgDOHKQM5OFpzKbmA=
+Received: from github.com (Unknown [192.30.252.44]) by mxa.mailgun.org with
+ ESMTP id 53227fe9.7f903cd74780-in3; Fri, 14 Mar 2014 04:04:57 -0000 (UTC)
+Date: Thu, 13 Mar 2014 21:04:56 -0700
+From: GitHub <noreply@github.com>
+Reply-To: GitHub <noreply@github.com>
+To: danjou@soffritto.org
+Message-Id: <53227fe839725_23de1277d3c11061d@hookshot-fe1-cp1-prd.iad.github.net.mail>
+Subject: [soffritto/Soffritto-Deploy]
+Mime-Version: 1.0
+Content-Type: multipart/mixed; boundary="--==_mimepart_53227fe839157_23de1277d3c110532"; charset="UTF-8"
+Content-Transfer-Encoding: 7bit
+X-Mailgun-Sid: WyI3Y2QzNiIsICJkYW5qb3VAc29mZnJpdHRvLm9yZyIsICI0MGYiXQ==
+Sender: noreply@github.com
+
+----==_mimepart_53227fe839157_23de1277d3c110532
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+  Branch: refs/heads/first_implementation
+  Home:   https://github.com/soffritto/Soffritto-Deploy
+
+----==_mimepart_53227fe839157_23de1277d3c110532--
