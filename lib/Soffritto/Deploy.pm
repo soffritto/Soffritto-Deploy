@@ -104,11 +104,15 @@ END
         my $dirname = dirname($self->{deploy_to});
         -d $dirname or die "$self->{deploy_to} nor its parent directory not found";
         my $basename = basename($self->{deploy_to});
+        my $checkout = 'true';
+        if ($self->{branch} ne 'master') {
+            $checkout = "$git checkout -qb $self->{branch} origin/$self->{branch}";
+        }
         $system = <<END
 cd $dirname && \
     $git clone -q $repo $basename && \
     cd $basename && \
-    $git checkout -qb $self->{branch} origin/$self->{branch} && \
+    $checkout && \
     $self->{after_deploy}
 END
     }
